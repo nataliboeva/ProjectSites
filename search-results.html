@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Резултати от търсенето</title>
+    <link rel="stylesheet" href="project.css">
+    <style>
+        .results-container {
+            margin: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        .result-item {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #75b9fd;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .result-item:hover {
+            background-color: #1764b1;;
+        }
+        .back-button-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .back-button {
+            padding: 8px 15px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none;
+            text-align: center;
+        }
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+        .result-count {
+            text-align: center;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Резултати от търсенето</h1>
+    <div class="results-container" id="resultsContainer"></div>
+    <div class="result-count" id="resultCount"></div>
+    <div class="back-button-container">
+        <a href="project.html" class="back-button">Назад</a>
+    </div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const searchTerm = params.get('query');
+        const resultsContainer = document.getElementById('resultsContainer');
+        const resultCount = document.getElementById('resultCount');
+
+        const pages = [
+            { name: "Домашни ремонти и аварии", url: "site1.html" },
+            { name: "Лични финанси и бюджетиране", url: "site2.html" },
+            { name: "Намаляване на хранителните отпадъци", url: "site3.html" },
+            { name: "Помощ за възрастни хора с технологии", url: "site4.html" },
+            { name: "Съвети за млади родители", url: "site5.html" },
+            { name: "Защита на трудовите права", url: "site6.html" },
+            { name: "Проверка на новини", url: "site7.html" },
+            { name: "Културна памет", url: "site8.html" }
+        ];
+
+        const results = pages.filter(page => page.name.toLowerCase().includes(searchTerm.toLowerCase()));
+
+        resultCount.textContent = `Намерени резултати: ${results.length}`;
+
+        if (results.length > 0) {
+            results.forEach(page => {
+                const resultItem = document.createElement('div');
+                resultItem.className = 'result-item';
+                resultItem.textContent = page.name;
+                resultItem.onclick = () => window.location.href = page.url;
+                resultsContainer.appendChild(resultItem);
+            });
+        } else {
+            resultsContainer.textContent = "Няма намерени страници.";
+        }
+    </script>
+</body>
+</html> 

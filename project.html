@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сайтове в полза на обществото</title>
+    <link rel="stylesheet" href="project.css">
+    <style>
+        .search-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .search-container input {
+            padding: 10px;
+            width: 80%;
+            max-width: 400px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .search-container button {
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .search-container button:hover {
+            background-color: #0056b3;
+        }
+        .menu {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .menu button {
+            margin: 0 10px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .menu button:hover {
+            background-color: #0056b3;
+        }
+        .contact-link {
+            display: block;
+            text-align: center;
+            margin: 20px;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .contact-link:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="search-container">
+        <input type="text" placeholder="Търсене..." id="searchInput" onkeypress="checkEnter(event)">
+        <button onclick="searchFunction()">Търси</button>
+    </div>
+
+    <h1>Една платформа за решения на ежедневни проблеми и подкрепа за обществото</h1>
+    <p>Тук можете да намерите полезни ресурси и информация, които да ви помогнат в ежедневието.</p>
+
+    <div class="menu">
+        <button onclick="location.href='site1.html'">Домашни ремонти и аварии</button>
+        <button onclick="location.href='site2.html'">Лични финанси и бюджетиране</button>
+        <button onclick="location.href='site3.html'">Намаляване на хранителните отпадъци</button>
+        <button onclick="location.href='site4.html'">Помощ за възрастни хора с технологии</button>
+        <button onclick="location.href='site5.html'">Съвети за млади родители</button>
+        <button onclick="location.href='site6.html'">Защита на трудовите права</button>
+        <button onclick="location.href='site7.html'">Проверка на новини</button>
+        <button onclick="location.href='site8.html'">Културна памет</button>
+    </div>
+
+    <a href="contact.html" class="contact-link">Свържете се за колаборация</a>
+
+    <script>
+        function searchFunction() {
+            const input = document.getElementById('searchInput').value;
+            window.location.href = `search-results.html?query=${encodeURIComponent(input)}`;
+        }
+
+        function checkEnter(event) {
+            if (event.key === 'Enter') {
+                searchFunction();
+            }
+        }
+    </script>
+</body>
+</html>

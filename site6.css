@@ -1,0 +1,55 @@
+body {
+    background: linear-gradient(to bottom right, #d0f0c0, #a8e6cf); /* Примерен светло зелен градиент */
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+.container img {
+    display: block; /* Превръща изображението в блоков елемент */
+    margin: 0 auto; /* Центрира изображението */
+    max-width: 80%; /* Ограничаване на максималната ширина */
+    height: auto; /* Запазва пропорциите на изображението */
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #2e7d32;
+}
+
+.result-item {
+    margin: 10px 0;
+    padding: 15px;
+    background-color: #f1f8e9;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.result-item:hover {
+    background-color: #c8e6c9;
+}
+.back-button {
+    padding: 10px 20px; /* Увеличен padding */
+    background-color: #007BFF; /* Син фон */
+    color: white; /* Бял текст */
+    border: none; /* Без рамка */
+    border-radius: 5px; /* Закръглени ъгли */
+    cursor: pointer; /* Курсор при задържане */
+    text-decoration: none; /* Без подчертаване */
+    transition: background-color 0.3s; /* Плавен преход на цвета */
+    display: inline-block; /* За да работи margin auto */
+}
+
+.back-button:hover {
+    background-color: #0056b3; /* По-тъмен син при задържане */
+}
+.back-button-container {
+    display: flex; /* Използваме Flexbox */
+    justify-content: center; /* Центрира съдържанието по хоризонталата */
+    margin: 20px 0; /* Разстояние около контейнера */
+}

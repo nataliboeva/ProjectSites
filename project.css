@@ -1,0 +1,90 @@
+/* Основни стилове за страниците */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #6a11cb, #2575fc); /* Фон за главната страница */
+    margin: 0;
+    padding: 0;
+    color: white; /* Цветът на текста за главната страница */
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачен фон за менюто */
+    padding: 15px;
+}
+
+.menu button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #007BFF; /* Нов цвят на бутоните */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 0 5px; /* Разстояние между бутоните */
+}
+
+.menu button:hover {
+    background-color: #0056b3; /* Тъмен цвят при задържане */
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+p {
+    text-align: center;
+    margin: 20px;
+}
+
+.hero {
+    background-image: url('hero-image.jpg'); /* Добавете вашето изображение */
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Стилове за страниците с идеи */
+.page-body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4; /* Светъл фон */
+    color: #333; /* Тъмен текст */
+    margin: 0;
+    padding: 20px;
+}
+
+.page-body h1 {
+    text-align: center;
+}
+
+.page-body button {
+    display: block;
+    margin: 20px auto; /* Центрирано разстояние */
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #007BFF; /* Нов цвят на бутоните */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.page-body button:hover {
+    background-color: #0056b3; /* Тъмен цвят при задържане */
+}
+
+/* Responsive стилове */
+@media (max-width: 600px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu button {
+        width: 80%; /* Ширина на бутоните на малки екрани */
+        margin: 5px 0;
+    }
+} 
