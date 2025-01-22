@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Сайтове в полза на обществото</title>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="styles/index.css">
     <style>
         .search-container {
             text-align: center;
@@ -73,22 +73,24 @@
     <p>Тук можете да намерите полезни ресурси и информация, които да ви помогнат в ежедневието.</p>
 
     <div class="menu">
-        <button onclick="location.href='site1.html'">Домашни ремонти и аварии</button>
-        <button onclick="location.href='site2.html'">Лични финанси и бюджетиране</button>
-        <button onclick="location.href='site3.html'">Намаляване на хранителните отпадъци</button>
-        <button onclick="location.href='site4.html'">Помощ за възрастни хора с технологии</button>
-        <button onclick="location.href='site5.html'">Съвети за млади родители</button>
-        <button onclick="location.href='site6.html'">Защита на трудовите права</button>
-        <button onclick="location.href='site7.html'">Проверка на новини</button>
-        <button onclick="location.href='site8.html'">Културна памет</button>
+        <button onclick="location.href='components/site1.html'">Домашни ремонти и аварии</button>
+        <button onclick="location.href='components/site2.html'">Лични финанси и бюджетиране</button>
+        <button onclick="location.href='components/site3.html'">Намаляване на хранителните отпадъци</button>
+        <button onclick="location.href='components/site4.html'">Помощ за възрастни хора с технологии</button>
+        <button onclick="location.href='components/site5.html'">Съвети за млади родители</button>
+        <button onclick="location.href='components/site6.html'">Защита на трудовите права</button>
+        <button onclick="location.href='components/site7.html'">Проверка на новини</button>
+        <button onclick="location.href='components/site8.html'">Културна памет</button>
     </div>
 
-    <a href="contact.html" class="contact-link">Свържете се за колаборация</a>
+    <a href="components/contact.html" class="contact-link">Свържете се за колаборация</a>
 
     <script>
         function searchFunction() {
             const input = document.getElementById('searchInput').value;
-            window.location.href = `search-results.html?query=${encodeURIComponent(input)}`;
+            if (input.trim() !== '') {
+                window.location.href = `components/search-results.html?query=${encodeURIComponent(input)}`;
+            }
         }
 
         function checkEnter(event) {
