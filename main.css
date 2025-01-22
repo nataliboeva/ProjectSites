@@ -1,0 +1,150 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+}
+
+.menu button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 0 5px;
+}
+
+.menu button:hover {
+    background-color: #0056b3;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+p {
+    text-align: center;
+    margin: 20px;
+}
+
+.hero {
+    background-image: url('hero-image.jpg');
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+}
+
+.page-body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+.page-body h1 {
+    text-align: center;
+}
+
+.page-body button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.page-body button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .menu button {
+        width: 90%;
+        margin: 5px 0;
+        padding: 12px 20px;
+        font-size: 16px;
+    }
+
+    .search-container {
+        padding: 0 15px;
+    }
+
+    .search-container input {
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 12px;
+    }
+
+    .search-container button {
+        width: 100%;
+        padding: 12px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+        margin: 15px 10px;
+    }
+
+    p {
+        font-size: 1em;
+        margin: 15px 10px;
+        line-height: 1.6;
+    }
+
+    .hero {
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu button {
+        width: 95%;
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+
+    h1 {
+        font-size: 1.2em;
+        margin: 10px 5px;
+    }
+
+    p {
+        font-size: 0.9em;
+        margin: 10px 5px;
+    }
+
+    .hero {
+        height: 150px;
+    }
+
+    .search-container input,
+    .search-container button {
+        font-size: 14px;
+        padding: 10px;
+    }
+} 
